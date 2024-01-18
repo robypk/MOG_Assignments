@@ -17,8 +17,7 @@ public class ScrollViewContentsize : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float contentHight = Screen.height * 0.08f;
-        float recthight = rectTransform.childCount * contentHight;
-        rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, recthight);
+        var height = rectTransform.GetChild(0).GetComponent<RectTransform>().sizeDelta.y * rectTransform.childCount;
+        rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, height);
     }
 }
