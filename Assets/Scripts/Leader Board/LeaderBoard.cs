@@ -43,10 +43,10 @@ namespace MOG.Roby
 
 
 
-        private void onLeaderCardSelected(LeaderCard currentCard, bool togglestate)
+        private void onLeaderCardSelected(LeaderCard currentCard, bool isSelected)
         {
 
-            if (togglestate)
+            if (isSelected)
             {
                 selectedPlayerName.text = currentCard.PlayerName;
                 slectedPlayerScore.text = currentCard.PlayerScore .ToString();

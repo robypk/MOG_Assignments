@@ -27,17 +27,17 @@ namespace MOG.Roby
         }
 
 
-        private void onCardSlected(bool arg0)
+        private void onCardSlected(bool isSelected)
         {
-            EventManager.onLeaderCardSelected(this ,arg0);
+            EventManager.onLeaderCardSelected(this ,isSelected);
         }
 
 
-        private void onLeaderCardSelected(LeaderCard card, bool toggleState)
+        private void onLeaderCardSelected(LeaderCard card, bool isSelected)
         {
             if (card != this)
             {
-                cardSelecteingToggle.interactable = !toggleState;
+                cardSelecteingToggle.interactable = !isSelected;
             }
         }
 
