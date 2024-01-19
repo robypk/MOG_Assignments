@@ -4,16 +4,24 @@ using UnityEngine.UI;
 
 namespace MOG.Roby
 {
+    public struct PlayerDetails
+    {
+        public string Name;
+        public int Score;
+        public int Rank;
+    }
     public class LeaderCard : MonoBehaviour
     {
+
+        public PlayerDetails playerDetails = new PlayerDetails();
         [SerializeField] TMP_Text rankText;
         [SerializeField] TMP_Text scoreText;
         [SerializeField] TMP_Text nameText;
         public Toggle cardSelecteingToggle;
-        public string PlayerName { private set; get; }
-        public int PlayerScore;
+        [HideInInspector] public string PlayerName { private set; get; }
+        [HideInInspector]public int PlayerScore;
 
-       void Start ()
+        void Start ()
         {
             cardSelecteingToggle.onValueChanged.AddListener(onCardSlected);
         }
@@ -45,18 +53,21 @@ namespace MOG.Roby
         public void SetPlayerRank(int rank)
         {
             rankText.text =  rank.ToString();
+            playerDetails.Rank = rank;
         }
 
         public void SetScore(int score) 
         {
             scoreText.text = "Score:" + score.ToString();
             PlayerScore = score;
+            playerDetails.Score = score;
         }
         
         public void SetPlayerName(string name)
         {
             nameText.text = name.ToString();
             PlayerName = name;
+            playerDetails.Name = name;
         }
     }
 }
