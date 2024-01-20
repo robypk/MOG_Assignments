@@ -12,6 +12,7 @@ namespace MOG.Roby
         [SerializeField] TMP_Text InputText;
         [SerializeField] Button AddButton;
         [SerializeField] TMP_InputField IntegerInputField;
+        [SerializeField] Button ClearButton;
 
         [SerializeField] Button Example1_Button;
         [SerializeField] Button Example2_Button;
@@ -32,12 +33,20 @@ namespace MOG.Roby
         void Start()
         {
             AddButton.onClick.AddListener(OnAddButtonClick);
+            ClearButton.onClick.AddListener(OnClearButtonClick);
             Example1_Button.onClick.AddListener(()=>onExampleButtonClick(new List<int> {-7, -5, 4, 5, 6 }));
             Example2_Button.onClick.AddListener(()=>onExampleButtonClick(new List<int> { -7,-3, 4, 6, 10, 15 }));
             Example3_Button.onClick.AddListener(()=>onExampleButtonClick(new List<int> { -11, 5, 6, 11 }));
             Q1_Button.onClick.AddListener(QuestionOne);
             Q2_Button.onClick.AddListener(QuestionTwo);
             Q3_Button.onClick.AddListener(QuestionThree);
+
+        }
+
+        private void OnClearButtonClick()
+        {
+            Numbers.Clear();
+            InputText.text = string.Empty;
 
         }
 
