@@ -717,8 +717,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ee709f30e7ed7624ab8a9f8ef7a9e9e5, type: 3}
     - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
+      propertyPath: rewardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee709f30e7ed7624ab8a9f8ef7a9e9e5, type: 3}
+    - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
       propertyPath: RewardMultipler
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
+      propertyPath: rewardMultipler
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4900994951706269626, guid: 36ca49c70609db14294a132388399bec, type: 3}
       propertyPath: m_Pivot.x
@@ -976,8 +984,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 59a33922ae49ed74f94b5b945d5c7ceb, type: 3}
     - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
+      propertyPath: rewardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59a33922ae49ed74f94b5b945d5c7ceb, type: 3}
+    - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
       propertyPath: RewardMultipler
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
+      propertyPath: rewardMultipler
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4900994951706269626, guid: 36ca49c70609db14294a132388399bec, type: 3}
       propertyPath: m_Pivot.x
@@ -1615,8 +1631,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 67225246d85451648844542eaaf56710, type: 3}
     - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
+      propertyPath: rewardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 67225246d85451648844542eaaf56710, type: 3}
+    - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
       propertyPath: RewardMultipler
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
+      propertyPath: rewardMultipler
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4900994951706269626, guid: 36ca49c70609db14294a132388399bec, type: 3}
       propertyPath: m_Pivot.x
@@ -1724,8 +1748,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 659776d7712ef3347a2def70c4341aab, type: 3}
     - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
+      propertyPath: rewardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 659776d7712ef3347a2def70c4341aab, type: 3}
+    - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
       propertyPath: RewardMultipler
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
+      propertyPath: rewardMultipler
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4900994951706269626, guid: 36ca49c70609db14294a132388399bec, type: 3}
       propertyPath: m_Pivot.x
@@ -1849,8 +1881,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 76164c53a1d9b594b92799f71aceb276, type: 3}
     - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
+      propertyPath: rewardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 76164c53a1d9b594b92799f71aceb276, type: 3}
+    - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
       propertyPath: RewardMultipler
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
+      propertyPath: rewardMultipler
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4900994951706269626, guid: 36ca49c70609db14294a132388399bec, type: 3}
       propertyPath: m_Pivot.x
@@ -2908,9 +2948,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dde00b942b3822b458f1f460bbff401c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RewardSprite: {fileID: 21300000, guid: ee709f30e7ed7624ab8a9f8ef7a9e9e5, type: 3}
+  rewardSprite: {fileID: 21300000, guid: 659776d7712ef3347a2def70c4341aab, type: 3}
   Day: 7
-  RewardMultipler: 15
+  rewardMultipler: 15
   yellowBG: {fileID: 2290044974628886377}
   greenBG: {fileID: 1070215928802442068}
   dayText: {fileID: 1070215929435801414}
@@ -3010,8 +3050,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 659776d7712ef3347a2def70c4341aab, type: 3}
     - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
+      propertyPath: rewardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 659776d7712ef3347a2def70c4341aab, type: 3}
+    - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
       propertyPath: RewardMultipler
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346123726958362472, guid: 36ca49c70609db14294a132388399bec, type: 3}
+      propertyPath: rewardMultipler
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4900994951706269626, guid: 36ca49c70609db14294a132388399bec, type: 3}
       propertyPath: m_Pivot.x

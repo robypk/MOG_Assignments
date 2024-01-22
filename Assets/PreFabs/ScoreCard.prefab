@@ -408,7 +408,7 @@ MonoBehaviour:
   rankText: {fileID: 2062388734821916091}
   scoreText: {fileID: 2062388736049238557}
   nameText: {fileID: 2062388735497884812}
-  cardSelecteingToggle: {fileID: 4652788362677668112}
+  CardSelecteingToggle: {fileID: 4652788362677668112}
   PlayerScore: 0
 --- !u!114 &3135429685490259654
 MonoBehaviour:
@@ -973,7 +973,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.35
+  m_fontSize: 24.3
   m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 1
