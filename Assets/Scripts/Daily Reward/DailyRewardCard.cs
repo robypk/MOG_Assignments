@@ -9,9 +9,9 @@ namespace MOG.Roby
     public class DailyRewardCard : MonoBehaviour
     {
         [Header("Reward Data")]
-        [SerializeField] Sprite RewardSprite;
+        [SerializeField] Sprite rewardSprite;
         [SerializeField] public int Day;
-        [SerializeField] int RewardMultipler;
+        [SerializeField] int rewardMultipler;
 
 
         [Header("Reward Referances")]
@@ -25,48 +25,33 @@ namespace MOG.Roby
         float scaleSpeed = 1.0f;
         float minScale = 0.5f;
         float maxScale = .8f;
-        Coroutine ImageScaleCoroutine;
+        Coroutine imageScaleCoroutine;
 
         void Awake()
         {
             Init();
         }
 
- 
-
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
-
-
         private void Init()
         {
             dayText.text = "Day " + Day;
-            rewardMultiplerText.text = RewardMultipler + "X";
-            rewardImage.sprite = RewardSprite;
+            rewardMultiplerText.text = rewardMultipler + "X";
+            rewardImage.sprite = rewardSprite;
         } 
 
 
         public void TodayReward()
         {
             greenBG.SetActive(true);
-            ImageScaleCoroutine =  StartCoroutine(ScaleImage(rewardImage.gameObject));
+            imageScaleCoroutine =  StartCoroutine(ScaleImage(rewardImage.gameObject));
         }
 
         public void Rewardcollected()
         {
             tickImage.SetActive(true);
-            if(ImageScaleCoroutine != null)
+            if(imageScaleCoroutine != null)
             {
-                StopCoroutine(ImageScaleCoroutine);
+                StopCoroutine(imageScaleCoroutine);
             }
 
         }
@@ -75,14 +60,12 @@ namespace MOG.Roby
         {
             while (true)
             {
-                // Scale in
                 while (imageObject.transform.localScale.x < maxScale )
                 {
                     imageObject.transform.localScale += new Vector3(scaleSpeed, scaleSpeed, 0) * Time.deltaTime;
                     yield return null;
                 }
 
-                // Scale out
                 while (imageObject.transform.localScale.x > minScale)
                 {
                     imageObject.transform.localScale -= new Vector3(scaleSpeed, scaleSpeed, 0) * Time.deltaTime;

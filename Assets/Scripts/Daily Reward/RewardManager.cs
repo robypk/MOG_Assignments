@@ -13,9 +13,9 @@ namespace MOG.Roby
 
         [SerializeField] List<DailyRewardCard> dailyRewardCards;
         [SerializeField] Button collectButton;
-        string RewardLogPath;
-        RewardData RewardLogData;
-        DailyRewardCard TodayRewadCard;
+        string rewardLogPath;
+        RewardData rewardLogData;
+        DailyRewardCard todayRewadCard;
 
         void Awake()
         {
@@ -24,23 +24,23 @@ namespace MOG.Roby
 
         void Init()
         {
-            RewardLogPath = Path.Combine(Application.dataPath, "RewardLog.json");
-            if (File.Exists(RewardLogPath))
+            rewardLogPath = Path.Combine(Application.dataPath, "RewardLog.json");
+            if (File.Exists(rewardLogPath))
             {
-                string data = File.ReadAllText(RewardLogPath);
-                RewardLogData = JsonUtility.FromJson<RewardData>(data);
+                string data = File.ReadAllText(rewardLogPath);
+                rewardLogData = JsonUtility.FromJson<RewardData>(data);
                 return;
             }
             RewardData rewardData = new RewardData();
             string json = JsonUtility.ToJson(rewardData, true);
-            File.WriteAllText(RewardLogPath, json);
-            RewardLogData = rewardData;
+            File.WriteAllText(rewardLogPath, json);
+            rewardLogData = rewardData;
         }
 
         void Start()
         {
-            ClaimedRewards(RewardLogData);
-            TodayReward(RewardLogData);
+            ClaimedRewards(rewardLogData);
+            TodayReward(rewardLogData);
         }
 
         void ClaimedRewards(RewardData rewardData)
@@ -79,24 +79,24 @@ namespace MOG.Roby
 
             collectButtonInteraction("TAB TO COLLECT", true);
             //rewardData.Rewards.Sort((currentDay, previousDay) => previousDay.Day.CompareTo(currentDay.Day));
-            TodayRewadCard = dailyRewardCards[rewardData.Rewards.Count];
-            TodayRewadCard.TodayReward();
+            todayRewadCard = dailyRewardCards[rewardData.Rewards.Count];
+            todayRewadCard.TodayReward();
         }
 
 
         public void onCollectRewardButtonClick()
         {
             RewardData newRewardData = new RewardData();
-            newRewardData = RewardLogData;
+            newRewardData = rewardLogData;
             newRewardData.Rewards.Add(new Reward 
             { 
-              Day = RewardLogData.Rewards.Count +1 , 
+              Day = rewardLogData.Rewards.Count +1 , 
               Time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") 
             });
-            TodayRewadCard.Rewardcollected();
+            todayRewadCard.Rewardcollected();
 
             string json = JsonUtility.ToJson(newRewardData,true);
-            File.WriteAllText(RewardLogPath, json);
+            File.WriteAllText(rewardLogPath, json);
 
             collectButtonInteraction("COME BACK EVERY DAY TO COLLECT YOUR REWARDS", false);
         }

@@ -13,17 +13,17 @@ namespace MOG.Roby
     public class LeaderCard : MonoBehaviour
     {
 
-        public PlayerDetails playerDetails = new PlayerDetails();
+        public PlayerDetails PlayerDetails = new PlayerDetails();
         [SerializeField] TMP_Text rankText;
         [SerializeField] TMP_Text scoreText;
         [SerializeField] TMP_Text nameText;
-        public Toggle cardSelecteingToggle;
+        public Toggle CardSelecteingToggle;
         [HideInInspector] public string PlayerName { private set; get; }
         [HideInInspector]public int PlayerScore;
 
         void Start ()
         {
-            cardSelecteingToggle.onValueChanged.AddListener(onCardSlected);
+            CardSelecteingToggle.onValueChanged.AddListener(onCardSlected);
         }
         private void OnEnable()
         {
@@ -45,7 +45,7 @@ namespace MOG.Roby
         {
             if (card != this)
             {
-                cardSelecteingToggle.interactable = !isSelected;
+                CardSelecteingToggle.interactable = !isSelected;
             }
         }
 
@@ -53,21 +53,21 @@ namespace MOG.Roby
         public void SetPlayerRank(int rank)
         {
             rankText.text =  rank.ToString();
-            playerDetails.Rank = rank;
+            PlayerDetails.Rank = rank;
         }
 
         public void SetScore(int score) 
         {
             scoreText.text = "Score:" + score.ToString();
             PlayerScore = score;
-            playerDetails.Score = score;
+            PlayerDetails.Score = score;
         }
         
         public void SetPlayerName(string name)
         {
             nameText.text = name.ToString();
             PlayerName = name;
-            playerDetails.Name = name;
+            PlayerDetails.Name = name;
         }
     }
 }
